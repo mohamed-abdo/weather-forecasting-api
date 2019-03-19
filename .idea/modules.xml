@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/api.iml" filepath="$PROJECT_DIR$/api.iml" />
       <module fileurl="file://$PROJECT_DIR$/forecast-api/forecast-api.iml" filepath="$PROJECT_DIR$/forecast-api/forecast-api.iml" />
-      <module fileurl="file://$PROJECT_DIR$/openweather-adapter/openweather-adapter.iml" filepath="$PROJECT_DIR$/openweather-adapter/openweather-adapter.iml" />
-      <module fileurl="file://$PROJECT_DIR$/thirdparty-data-provider/thirdparty-data-provider.iml" filepath="$PROJECT_DIR$/thirdparty-data-provider/thirdparty-data-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/weather-forecasting-rest-api.iml" filepath="$PROJECT_DIR$/.idea/weather-forecasting-rest-api.iml" />
     </modules>
   </component>
 </project>

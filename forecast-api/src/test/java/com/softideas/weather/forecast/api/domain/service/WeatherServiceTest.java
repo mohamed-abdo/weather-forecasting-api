@@ -1,10 +1,10 @@
 package com.softideas.weather.forecast.api.domain.service;
 
+import com.softideas.weather.forecast.adaptee.domain.WeatherDataProvider;
+import com.softideas.weather.forecast.adaptee.domain.model.TemperatureUnit;
+import com.softideas.weather.forecast.adaptee.domain.model.WeatherData;
+import com.softideas.weather.forecast.adaptee.domain.model.WeatherForecast;
 import com.softideas.weather.forecast.api.domain.model.WeatherForecastData;
-import com.softideas.weather.provider.domain.WeatherDataProvider;
-import com.softideas.weather.provider.domain.model.TemperatureUnit;
-import com.softideas.weather.provider.domain.model.WeatherData;
-import com.softideas.weather.provider.domain.model.WeatherForecast;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -32,7 +32,7 @@ import static org.mockito.Mockito.when;
 @ComponentScan(basePackages = {
         "com.softideas.weather.forecast.api.domain.*",
         "com.softideas.weather.provider.domain.*",
-        "com.softideas.weather.openweather.adapter.*"})
+        "com.softideas.weather.openweather.adapter1.*"})
 public class WeatherServiceTest {
     private final String CITY = "London";
     private final String COUNTRY = "UK";

@@ -7,15 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="forecast-api" />
-        <module name="openweather-adapter" />
-        <module name="thirdparty-data-provider" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="api" target="1.5" />
-      <module name="forecast-api" target="8" />
-      <module name="openweather-adapter" target="8" />
-      <module name="thirdparty-data-provider" target="8" />
+      <module name="forecast-api" target="1.8" />
+      <module name="weather-forecasting-rest-api" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="forecast-api" options="-parameters" />
+    </option>
   </component>
 </project>

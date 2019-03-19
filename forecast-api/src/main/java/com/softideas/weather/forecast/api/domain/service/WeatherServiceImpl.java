@@ -1,6 +1,5 @@
 package com.softideas.weather.forecast.api.domain.service;
 
-import com.softideas.weather.forecast.api.domain.controller.WeatherForecastController;
 import com.softideas.weather.forecast.api.domain.model.WeatherForecastData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
