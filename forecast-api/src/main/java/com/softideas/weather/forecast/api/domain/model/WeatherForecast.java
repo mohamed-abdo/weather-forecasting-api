@@ -3,40 +3,40 @@ package com.softideas.weather.forecast.api.domain.model;
 import java.io.Serializable;
 
 public class WeatherForecast implements Serializable {
-    private Double morningAverageTemperature;
-    private Double nightAverageTemperature;
-    private Double pressureAverage;
+    private String morningTemperature;
+    private String nightTemperature;
+    private String pressure;
 
-    public Double getMorningAverageTemperature() {
-        return morningAverageTemperature;
+    public String getMorningTemperature() {
+        return morningTemperature;
     }
 
-    public void setMorningAverageTemperature(Double morningAverageTemperature) {
-        this.morningAverageTemperature = morningAverageTemperature;
+    public void setMorningTemperature(String morningTemperature) {
+        this.morningTemperature = morningTemperature;
     }
 
-    public Double getNightAverageTemperature() {
-        return nightAverageTemperature;
+    public String getNightTemperature() {
+        return nightTemperature;
     }
 
-    public void setNightAverageTemperature(Double nightAverageTemperature) {
-        this.nightAverageTemperature = nightAverageTemperature;
+    public void setNightTemperature(String nightTemperature) {
+        this.nightTemperature = nightTemperature;
     }
 
-    public Double getPressureAverage() {
-        return pressureAverage;
+    public String getPressure() {
+        return pressure;
     }
 
-    public void setPressureAverage(Double pressureAverage) {
-        this.pressureAverage = pressureAverage;
+    public void setPressure(String pressure) {
+        this.pressure = pressure;
     }
 
     public WeatherForecast() {
     }
 
-    public WeatherForecast(Double morningAverageTemperature, Double nightAverageTemperature, Double pressureAverage) {
-        this.morningAverageTemperature = morningAverageTemperature;
-        this.nightAverageTemperature = nightAverageTemperature;
-        this.pressureAverage = pressureAverage;
+    public WeatherForecast(String morningTemperature, String nightTemperature, String pressureAverage) {
+        this.morningTemperature = morningTemperature;
+        this.nightTemperature = nightTemperature;
+        this.pressure = pressureAverage;
     }
 }

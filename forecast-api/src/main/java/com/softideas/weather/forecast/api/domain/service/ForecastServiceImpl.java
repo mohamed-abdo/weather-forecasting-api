@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.DecimalFormat;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -28,6 +29,7 @@ public class ForecastServiceImpl implements ForecastService {
 
     @Autowired
     private OpenWeatherApiRepository openWeatherAPIRepository;
+    private static final DecimalFormat df2 = new DecimalFormat(".##");
 
     @Override
     public Optional<WeatherForecast> forecastWeather(String city, String country) {
@@ -54,13 +56,13 @@ public class ForecastServiceImpl implements ForecastService {
             for (ForecastData forecastData : forecastDataList) {
                 switch (forecastData.getDayShift()) {
                     case DayTime:
-                        weatherForecast.setMorningAverageTemperature(forecastData.getAverageTemperature());
+                        weatherForecast.setMorningTemperature(df2.format(forecastData.getAverageTemperature()));
                         break;
                     case NightTime:
-                        weatherForecast.setNightAverageTemperature(forecastData.getAverageTemperature());
+                        weatherForecast.setNightTemperature(df2.format(forecastData.getAverageTemperature()));
                         break;
                 }
-                weatherForecast.setPressureAverage(forecastData.getPressureAverageTemperature());
+                weatherForecast.setPressure(df2.format(forecastData.getPressureAverageTemperature()));
             }
             return weatherForecast;
         });

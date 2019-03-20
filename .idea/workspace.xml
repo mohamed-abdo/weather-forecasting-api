@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f1b65611-3ecc-4bde-81ab-d4a125fcbbca" name="Default Changelist" comment="fix forecast result">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_2_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_1_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/config/ExceptionHandlerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/domain/exception/ForecastNotAvailableException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/META-INF/forecast-api.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/adaptee/domain/DataProvider.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/adaptee/domain/model/TemperatureUnit.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/adaptee/domain/model/WeatherData$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/adaptee/domain/model/WeatherData.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/adaptee/domain/model/WeatherForecast.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/forecast/api/config/ExceptionHandlerController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/forecast/api/controller/ForecastController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/forecast/api/domain/exception/ForecastNotAvailableException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/forecast/api/domain/model/DayShift.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/forecast/api/domain/model/ForecastData$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/forecast/api/domain/model/ForecastData.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/forecast/api/domain/model/WeatherForecast.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/forecast/api/domain/service/ForecastService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/forecast/api/domain/service/ForecastServiceImpl$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/forecast/api/domain/service/ForecastServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/openweather/forecast/adapter/domain/model/City.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/openweather/forecast/adapter/domain/model/Clouds.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/openweather/forecast/adapter/domain/model/Coord.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/openweather/forecast/adapter/domain/model/List.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/openweather/forecast/adapter/domain/model/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/openweather/forecast/adapter/domain/model/Snow.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/openweather/forecast/adapter/domain/model/Sys.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/openweather/forecast/adapter/domain/model/Weather.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/openweather/forecast/adapter/domain/model/WeatherApiResponse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/openweather/forecast/adapter/domain/model/Wind.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/openweather/forecast/adapter/domain/repository/OpenWeatherApiRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/openweather/forecast/adapter/domain/repository/OpenWeatherApiRepositoryImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/com/softideas/weather/openweather/forecast/adapter/domain/service/DataProviderImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/classes/config/Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/forecast-api-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/surefire-reports/2019-03-20T13-04-19_327-jvmRun1.dump" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/surefire-reports/TEST-com.softideas.weather.forecast.api.controller.ForecastIntegrationTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/surefire-reports/TEST-com.softideas.weather.forecast.api.domain.service.ForecastServiceTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/surefire-reports/TEST-com.softideas.weather.openweather.forecast.adapter.domain.integration.DataIntegrationTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/surefire-reports/TEST-com.softideas.weather.openweather.forecast.adapter.domain.service.DataProviderImplTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/surefire-reports/com.softideas.weather.forecast.api.controller.ForecastIntegrationTest.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/surefire-reports/com.softideas.weather.forecast.api.domain.service.ForecastServiceTest.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/surefire-reports/com.softideas.weather.openweather.forecast.adapter.domain.integration.DataIntegrationTest.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/surefire-reports/com.softideas.weather.openweather.forecast.adapter.domain.service.DataProviderImplTest.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/test-classes/com/softideas/weather/forecast/api/controller/ForecastIntegrationTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/test-classes/com/softideas/weather/forecast/api/domain/service/ForecastServiceTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/test-classes/com/softideas/weather/openweather/forecast/adapter/domain/integration/DataIntegrationTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecast-api/target/test-classes/com/softideas/weather/openweather/forecast/adapter/domain/service/DataProviderImplTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/weather-forecasting-rest-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/weather-forecasting-rest-api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forecast-api/forecast-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/forecast-api/forecast-api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forecast-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/forecast-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/controller/ForecastController.java" beforeDir="false" afterPath="$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/controller/ForecastController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/domain/ExceptionHandlerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/domain/model/WeatherForecast.java" beforeDir="false" afterPath="$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/domain/model/WeatherForecast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/domain/service/ForecastServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/domain/service/ForecastServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forecast-api/src/main/java/config/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/forecast-api/src/main/java/config/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forecast-api/src/test/java/com/softideas/weather/forecast/api/controller/ForecastIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/forecast-api/src/test/java/com/softideas/weather/forecast/api/controller/ForecastIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/forecast-api/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/config/ExceptionHandlerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="71">
+              <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/domain/service/ForecastServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="64" column="76" selection-start-line="64" selection-start-column="76" selection-end-line="64" selection-end-column="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/controller/ForecastController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="42" column="48" lean-forward="true" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.5.RELEASE/spring-webmvc-5.1.5.RELEASE.jar!/org/springframework/web/servlet/view/RedirectView.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="56" column="11" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/domain/model/WeatherForecast.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+              <folding>
+                <element signature="e#319#320#0" expanded="true" />
+                <element signature="e#367#368#0" expanded="true" />
+                <element signature="e#400#401#0" expanded="true" />
+                <element signature="e#460#461#0" expanded="true" />
+                <element signature="e#573#574#0" expanded="true" />
+                <element signature="e#619#620#0" expanded="true" />
+                <element signature="e#634#635#0" expanded="true" />
+                <element signature="e#690#691#0" expanded="true" />
+                <element signature="e#809#810#0" expanded="true" />
+                <element signature="e#847#848#0" expanded="true" />
+                <element signature="e#909#910#0" expanded="true" />
+                <element signature="e#963#964#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forecast-api/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/forecast-api/src/test/java/com/softideas/weather/forecast/api/controller/ForecastIntegrationTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="64" column="29" lean-forward="true" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/config/SwaggerConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/controller/ExceptionHandlerController.java" />
+        <option value="$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/domain/exception/ForecastNotAvaliableException.java" />
+        <option value="$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/domain/exception/ForecastNotAvailableException.java" />
+        <option value="$PROJECT_DIR$/forecast-api/src/main/java/config/ExceptionHandlerController.java" />
+        <option value="$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/domain/service/ForecastServiceImpl.java" />
+        <option value="$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/domain/model/WeatherForecast.java" />
+        <option value="$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/config/SwaggerConfig.java" />
+        <option value="$PROJECT_DIR$/forecast-api/pom.xml" />
+        <option value="$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/config/ExceptionHandlerController.java" />
+        <option value="$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/controller/ForecastController.java" />
+        <option value="$PROJECT_DIR$/forecast-api/src/test/java/com/softideas/weather/forecast/api/controller/ForecastIntegrationTest.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="forecast" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="forecast" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="2154" />
+    <option name="y" value="-10" />
+    <option name="width" value="1240" />
+    <option name="height" value="677" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="weather-forecasting-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weather-forecasting-rest-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weather-forecasting-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weather-forecasting-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="forecast-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weather-forecasting-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weather-forecasting-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="forecast-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weather-forecasting-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weather-forecasting-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="forecast-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weather-forecasting-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weather-forecasting-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="forecast-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weather-forecasting-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weather-forecasting-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="forecast-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="weather" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weather-forecasting-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weather-forecasting-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="forecast-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="weather" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weather-forecasting-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weather-forecasting-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="forecast-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="weather" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weather-forecasting-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weather-forecasting-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="forecast-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="weather" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weather-forecasting-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weather-forecasting-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="forecast-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weather-forecasting-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weather-forecasting-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="forecast-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weather-forecasting-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weather-forecasting-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="forecast-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weather-forecasting-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weather-forecasting-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="forecast-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="weather" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weather-forecasting-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weather-forecasting-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="forecast-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="weather" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weather-forecasting-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weather-forecasting-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="forecast-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="weather" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weather-forecasting-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weather-forecasting-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="forecast-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="weather" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553082292843" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.softideas.weather.forecast.api.controller" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="morningAverageTemperature" />
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.ForecastIntegrationTest.testInvalidDataExpectNotFoundStatus">
+    <configuration name="ForecastIntegrationTest.testInvalidDataExpectNotFoundStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="forecast-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.softideas.weather.forecast.api.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.softideas.weather.forecast.api.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.softideas.weather.forecast.api.controller.ForecastIntegrationTest" />
+      <option name="METHOD_NAME" value="testInvalidDataExpectNotFoundStatus" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="weather-api" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="forecast-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="config.Application" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.weather-api" />
+      <item itemvalue="JUnit.ForecastIntegrationTest.testInvalidDataExpectNotFoundStatus" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ForecastIntegrationTest.testInvalidDataExpectNotFoundStatus" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f1b65611-3ecc-4bde-81ab-d4a125fcbbca" name="Default Changelist" comment="" />
+      <created>1553009458129</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553009458129</updated>
+      <workItem from="1553009463379" duration="108000" />
+      <workItem from="1553009607258" duration="1918000" />
+      <workItem from="1553011675068" duration="127000" />
+      <workItem from="1553012235083" duration="655000" />
+      <workItem from="1553012904654" duration="2830000" />
+      <workItem from="1553015959978" duration="19655000" />
+      <workItem from="1553035778630" duration="581000" />
+      <workItem from="1553070934920" duration="1564000" />
+      <workItem from="1553072513559" duration="9128000" />
+    </task>
+    <task id="LOCAL-00001" summary="fix project structure">
+      <created>1553013007099</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1553013007099</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fix forecast result">
+      <created>1553035707313</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1553035707313</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="ForecastIntegrationTest_testInvalidDataExpectNotFoundStatus - 2019.03.20 at 15h 29m 23s.xml">
+      <configuration name="ForecastIntegrationTest.testInvalidDataExpectNotFoundStatus" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ForecastIntegrationTest_testInvalidDataExpectNotFoundStatus - 2019.03.20 at 15h 32m 33s.xml">
+      <configuration name="ForecastIntegrationTest.testInvalidDataExpectNotFoundStatus" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ForecastIntegrationTest_testInvalidDataExpectNotFoundStatus - 2019.03.20 at 15h 33m 34s.xml">
+      <configuration name="ForecastIntegrationTest.testInvalidDataExpectNotFoundStatus" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ForecastIntegrationTest_testInvalidDataExpectNotFoundStatus - 2019.03.20 at 15h 35m 36s.xml">
+      <configuration name="ForecastIntegrationTest.testInvalidDataExpectNotFoundStatus" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ForecastIntegrationTest_testInvalidDataExpectNotFoundStatus - 2019.03.20 at 15h 36m 06s.xml">
+      <configuration name="ForecastIntegrationTest.testInvalidDataExpectNotFoundStatus" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="9142000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19509594" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Learn" order="7" />
+      <window_info id="Web" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3997833" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32936078" />
+      <window_info anchor="bottom" id="Docker" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.32936078" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.13006397" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix project structure" />
+    <MESSAGE value="fix forecast result" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix forecast result" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/forecast-api/src/test/java/com/softideas/weather/openweather/forecast/adapter/domain/service/DataProviderImplTest.java</url>
+          <line>73</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/forecast-api/src/test/java/com/softideas/weather/forecast/api/controller/ForecastIntegrationTest.java</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/api/src/main/java/com/softideas/weather/forecast/api/controller/ForecastController.java</url>
+          <line>22</line>
+          <properties />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/config/ExceptionHandlerController.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/config/ExceptionHandlerController.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>new ResponseEntity&lt;&gt;(
+                ex.getMessage(), new HttpHeaders(), HttpStatus.NO_CONTENT)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>restTemplate.getForObject(url, WeatherApiResponse.class)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/forecast-api/src/main/java/config/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/domain/exception/ForecastNotAvailableException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#333#334#0" expanded="true" />
+            <element signature="e#378#379#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/openweather/forecast/adapter/domain/repository/OpenWeatherApiRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/domain/service/ForecastService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/domain/model/ForecastData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+          <folding>
+            <element signature="e#740#741#0" expanded="true" />
+            <element signature="e#771#772#0" expanded="true" />
+            <element signature="e#821#822#0" expanded="true" />
+            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#914#915#0" expanded="true" />
+            <element signature="e#963#964#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/domain/model/WeatherForecast.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#367#368#0" expanded="true" />
+            <element signature="e#400#401#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#573#574#0" expanded="true" />
+            <element signature="e#619#620#0" expanded="true" />
+            <element signature="e#634#635#0" expanded="true" />
+            <element signature="e#690#691#0" expanded="true" />
+            <element signature="e#809#810#0" expanded="true" />
+            <element signature="e#847#848#0" expanded="true" />
+            <element signature="e#909#910#0" expanded="true" />
+            <element signature="e#963#964#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.5.RELEASE/spring-webmvc-5.1.5.RELEASE.jar!/org/springframework/web/servlet/view/RedirectView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="56" column="11" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/config/SwaggerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.5.RELEASE/spring-web-5.1.5.RELEASE.jar!/org/springframework/web/bind/annotation/PathVariable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.5.RELEASE/spring-webmvc-5.1.5.RELEASE.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurationSupport.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="546" column="36" selection-start-line="546" selection-start-column="36" selection-end-line="546" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forecast-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/config/ExceptionHandlerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/domain/service/ForecastServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="64" column="76" selection-start-line="64" selection-start-column="76" selection-end-line="64" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forecast-api/src/main/java/com/softideas/weather/forecast/api/controller/ForecastController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="42" column="48" lean-forward="true" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/internal/matchers/ThrowableCauseMatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="46" column="51" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/rules/ExpectedException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="224" column="27" selection-start-line="224" selection-start-column="16" selection-end-line="224" selection-end-column="27" />
+          <folding>
+            <element signature="e#8203#8204#0" expanded="true" />
+            <element signature="e#8250#8251#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forecast-api/src/test/java/com/softideas/weather/forecast/api/controller/ForecastIntegrationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="64" column="29" lean-forward="true" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>forecast-api</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.2.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

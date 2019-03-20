@@ -2,7 +2,9 @@ package com.softideas.weather.forecast.api.controller;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -10,11 +12,14 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.util.NestedServletException;
 
 import java.time.LocalDate;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 
+import static org.hamcrest.core.Is.isA;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -44,11 +49,26 @@ public class ForecastIntegrationTest {
     }
 
     @Test
-    public void getData() throws Exception {
+    public void testValidData() throws Exception {
         String url = String.format("/data/%s/%s", CITY, COUNTRY);
         this.mockMvc
                 .perform(get(url))
                 .andDo(print())
                 .andExpect(status().isOk());
+    }
+
+    @Rule
+    public ExpectedException exceptionRule = ExpectedException.none();
+
+    @Test
+    public void testInvalidDataExpectNotFoundStatus() throws Exception {
+        exceptionRule.expect(NestedServletException.class);
+        exceptionRule.expectCause(isA(HttpClientErrorException.class));
+        String url = String.format("/data/%s/%s", "INVALID_CITY", "INVALID_COUNTRY");
+        this.mockMvc
+                .perform(get(url))
+                .andDo(print())
+                .andExpect(status().isNotFound());
+
     }
 }

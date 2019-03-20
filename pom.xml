@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>com.softideas.weather</groupId>
-    <artifactId>api</artifactId>
+    <artifactId>forecast</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
