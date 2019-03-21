@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/aspects/aspects.iml" filepath="$PROJECT_DIR$/aspects/aspects.iml" />
       <module fileurl="file://$PROJECT_DIR$/forecast-api/forecast-api.iml" filepath="$PROJECT_DIR$/forecast-api/forecast-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/weather-forecasting-rest-api.iml" filepath="$PROJECT_DIR$/.idea/weather-forecasting-rest-api.iml" />
     </modules>

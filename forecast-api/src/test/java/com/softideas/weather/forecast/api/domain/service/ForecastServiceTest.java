@@ -1,5 +1,6 @@
 package com.softideas.weather.forecast.api.domain.service;
 
+import com.softideas.common.aspects.validation.ValidatorException;
 import com.softideas.weather.adaptee.domain.DataProvider;
 import com.softideas.weather.adaptee.domain.model.TemperatureUnit;
 import com.softideas.weather.adaptee.domain.model.WeatherData;
@@ -14,6 +15,7 @@ import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -28,11 +30,13 @@ import static org.mockito.Mockito.when;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@EnableAspectJAutoProxy
 @ContextConfiguration(classes = {ForecastServiceTest.class})
 @ComponentScan(basePackages = {
         "com.softideas.weather.forecast.api.domain.*",
         "com.softideas.weather.forecast.adaptee.*",
-        "com.softideas.weather.openweather.forecast.adapter.*"})
+        "com.softideas.weather.openweather.forecast.adapter.*",
+        "com.softideas.common.*"})
 public class ForecastServiceTest {
     private final String CITY = "Dubai";
     private final String COUNTRY = "UAE";
@@ -82,7 +86,7 @@ public class ForecastServiceTest {
     }
 
     @Test
-    public void testQueryWeatherResults() {
+    public void testQueryWeatherResults() throws ValidatorException {
         when(dataProvider.queryWeather(CITY, COUNTRY)).thenReturn(
                 Optional.of(weatherForecast)
         );

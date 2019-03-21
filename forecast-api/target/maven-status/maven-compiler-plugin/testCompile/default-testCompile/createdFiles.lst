@@ -1,4 +1,0 @@
-com\softideas\weather\forecast\api\controller\ForecastIntegrationTest.class
-com\softideas\weather\openweather\forecast\adapter\domain\integration\DataIntegrationTest.class
-com\softideas\weather\openweather\forecast\adapter\domain\service\DataProviderImplTest.class
-com\softideas\weather\forecast\api\domain\service\ForecastServiceTest.class

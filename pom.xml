@@ -16,6 +16,7 @@
 
     <modules>
         <module>forecast-api</module>
+        <module>aspects</module>
     </modules>
 
     <properties>

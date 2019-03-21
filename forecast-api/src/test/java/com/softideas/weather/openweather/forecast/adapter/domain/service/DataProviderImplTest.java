@@ -14,8 +14,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.time.LocalDateTime;
@@ -26,8 +26,9 @@ import java.util.Optional;
 import static org.mockito.Mockito.when;
 
 @RunWith(SpringRunner.class)
+@EnableAspectJAutoProxy
 @SpringBootTest(classes = DataProviderImplTest.class)
-@ComponentScan(basePackages = {"com.softideas.weather.*"})
+@ComponentScan(basePackages = {"com.softideas.weather.*", "com.softideas.common.*"})
 public class DataProviderImplTest {
 
     private final String CITY = "Dubai";

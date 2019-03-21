@@ -3,7 +3,6 @@ package com.softideas.weather.openweather.forecast.adapter.domain.integration;
 import com.softideas.weather.adaptee.domain.DataProvider;
 import com.softideas.weather.adaptee.domain.model.WeatherForecast;
 import com.softideas.weather.openweather.forecast.adapter.domain.model.WeatherApiResponse;
-import com.softideas.weather.openweather.forecast.adapter.domain.repository.OpenWeatherApiRepository;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -12,13 +11,15 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Optional;
 
 @RunWith(SpringRunner.class)
+@EnableAspectJAutoProxy
 @SpringBootTest(classes = DataIntegrationTest.class)
-@ComponentScan(basePackages = {"com.softideas.weather.*"})
+@ComponentScan(basePackages = {"com.softideas.weather.*", "com.softideas.common.*"})
 public class DataIntegrationTest {
 
     private final String CITY = "Dubai";

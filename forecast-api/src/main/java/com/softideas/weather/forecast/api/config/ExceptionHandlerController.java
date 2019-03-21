@@ -1,5 +1,6 @@
 package com.softideas.weather.forecast.api.config;
 
+import com.softideas.common.aspects.validation.ValidatorException;
 import com.softideas.weather.forecast.api.domain.exception.ForecastNotAvailableException;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
@@ -29,6 +30,12 @@ public class ExceptionHandlerController extends ResponseEntityExceptionHandler {
     public ResponseEntity<Object> handleNoContent(Exception ex) {
         return new ResponseEntity<>(
                 "no data available.", new HttpHeaders(), HttpStatus.NO_CONTENT);
+    }
+
+    @ExceptionHandler({ValidatorException.class})
+    public ResponseEntity<Object> handleBadRequest(ValidatorException ex) {
+        return new ResponseEntity<>(
+                "city input is not accepted.", new HttpHeaders(), HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler({ Throwable.class })

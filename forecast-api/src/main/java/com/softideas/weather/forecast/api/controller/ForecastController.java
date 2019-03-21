@@ -1,5 +1,6 @@
 package com.softideas.weather.forecast.api.controller;
 
+import com.softideas.common.aspects.validation.ValidatorException;
 import com.softideas.weather.forecast.api.domain.exception.ForecastNotAvailableException;
 import com.softideas.weather.forecast.api.domain.model.WeatherForecast;
 import com.softideas.weather.forecast.api.domain.service.ForecastService;
@@ -28,7 +29,7 @@ public class ForecastController {
     @ResponseStatus(HttpStatus.OK)
     public @ResponseBody
     WeatherForecast getData(@PathVariable("city") @NonNull String city,
-                            @PathVariable(value = "countryISOCode", required = false) @Nullable String countryISOCode) throws ForecastNotAvailableException {
+                            @PathVariable(value = "countryISOCode", required = false) @Nullable String countryISOCode) throws ForecastNotAvailableException, ValidatorException {
         LOGGER.info("receive request: {}, {}", city, countryISOCode);
 
         return forecastService.forecastWeather(city, countryISOCode)

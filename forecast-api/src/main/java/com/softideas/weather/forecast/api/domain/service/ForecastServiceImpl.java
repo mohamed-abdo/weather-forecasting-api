@@ -1,5 +1,8 @@
 package com.softideas.weather.forecast.api.domain.service;
 
+import com.softideas.common.aspects.statistics.Info;
+import com.softideas.common.aspects.validation.Validate;
+import com.softideas.common.aspects.validation.ValidatorException;
 import com.softideas.weather.forecast.api.domain.model.DayShift;
 import com.softideas.weather.forecast.api.domain.model.ForecastData;
 import com.softideas.weather.forecast.api.domain.model.WeatherForecast;
@@ -31,8 +34,10 @@ public class ForecastServiceImpl implements ForecastService {
     private OpenWeatherApiRepository openWeatherAPIRepository;
     private static final DecimalFormat df2 = new DecimalFormat(".##");
 
+    @Info
+    @Validate(parameterName = "city", test = ValidateIForecastServiceImpl.class)
     @Override
-    public Optional<WeatherForecast> forecastWeather(String city, String country) {
+    public Optional<WeatherForecast> forecastWeather(String city, String country) throws ValidatorException {
         LOGGER.info("receive service request: {}, {}", city, country);
 
         return openWeatherAPIRepository.getData(city, country).map(data -> {
